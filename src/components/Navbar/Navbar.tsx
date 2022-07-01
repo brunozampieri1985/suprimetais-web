@@ -9,25 +9,54 @@ const Navbar: React.FC = () => {
       <nav className={styles.navbar}>
          <Container>
             <div className={styles.content}>
-               <div className={styles.logo}>SupriMetais</div>
-               <div
-                  className={`${styles.menuIcon} ${
-                     isOpen ? styles.active : ''
-                  }`}
-                  onClick={() => setIsOpen(!isOpen)}
-                  >
-                  <span />
-                  <span />
-                  <span />
+               <div className={styles.contentTop}>
+                  <div className={styles.logo}>SupriMetais</div>
+                  <div
+                     className={`${styles.menuIcon} ${
+                        isOpen ? styles.active : ''
+                     }`}
+                     onClick={() => setIsOpen(!isOpen)}>
+                     <span />
+                     <span />
+                     <span />
+                  </div>
                </div>
-               <ul className={styles.menu}>
-                  <li className={styles.menuItem}>Home</li>
-                  <li className={styles.menuItem}>Quem Somos</li>
-                  <li className={styles.menuItem}>Serviços</li>
-                  <li className={styles.menuItem}>Produtos</li>
-                  <li className={styles.menuItem}>Cotações</li>
-                  <li className={styles.menuItem}>Contato</li>
-               </ul>
+               {isOpen && (
+                  <ul className={styles.menu}>
+                     <li className={styles.menuItem}>
+                        <a href="" className={styles.menuLink}>
+                           Home
+                        </a>
+                     </li>
+                     <li className={styles.menuItem}>
+                        <a href="" className={styles.menuLink}>
+                           Quem Somos
+                        </a>
+                     </li>
+                    
+                     <li className={styles.menuItem}>
+                        <a href="" className={styles.menuLink}>
+                           Produtos
+                        </a>
+                     </li>
+                     <li className={styles.menuItem}>
+                        <a href="" className={styles.menuLink}>
+                           Serviços
+                        </a>
+                     </li>
+                     <li className={styles.menuItem}>
+                        <a href="" className={styles.menuLink}>
+                           Cotação
+                        </a>
+                     </li>
+                     <li className={styles.menuItem}>
+                        <a href="" className={styles.menuLink}>
+                           Contato
+                        </a>
+                     </li>
+                   
+                  </ul>
+               )}
             </div>
          </Container>
       </nav>
