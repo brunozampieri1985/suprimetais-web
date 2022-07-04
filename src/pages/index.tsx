@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import PageLayout from '@components/PageLayout'
+import Welcome from '@components/Welcome'
 
 const Home: NextPage = () => {
   return (
     <PageLayout>
-      <h1>SupriMetais</h1>
+      <Welcome />
     </PageLayout>
   )
 }

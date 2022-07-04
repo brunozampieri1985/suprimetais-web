@@ -1,0 +1,120 @@
+
+
+.logo {
+   font-family: 'Magneto';
+   font-size: 36px;
+   color: #f5f5f5;
+   transition: all 0.3s ease-in-out;
+   cursor: pointer;
+}
+
+.logo:hover {
+   color: var(--theme-400);
+}
+
+.navbar {
+   display: flex;
+   position: absolute;
+   width: 100%;
+   justify-content: space-between;
+   height: 90px;
+   align-items: center;
+   z-index: 2;
+   padding: 20px;
+   background: linear-gradient(
+      90deg,
+      rgba(26, 32, 44, 1) 0%,
+      rgba(19, 78, 74, 1) 35%,
+      rgba(17, 94, 89, 1) 100%
+   );
+}
+
+.menuIcon {
+   position: relative;
+   width: 36px;
+   height: 36px;
+   cursor: pointer;
+   overflow: hidden;
+}
+
+.menuIcon:hover > span {
+   background-color: var(--theme-400);
+}
+
+.menuIconTop,
+.menuIconMiddle,
+.menuIconBottom {
+   position: absolute;
+   height: 2px;
+   background-color: #f5f5f5;
+   left: 2px;
+   transition: all 0.3s ease-in-out;
+}
+
+.menuIconTop {
+   display: flex;
+   top: 9px;
+   width: 20px;
+}
+
+.menuIconMiddle {
+   top: 17px;
+   width: 32px;
+}
+
+.menuIconBottom {
+   top: 25px;
+   width: 28px;
+}
+
+.menuIcon.active .menuIconTop {
+   width: 24px;
+   top: 17px;
+   transform: rotate(45deg);
+}
+
+.menuIcon.active .menuIconMiddle {
+   transform: translateX(72px);
+}
+
+.menuIcon.active .menuIconBottom {
+   width: 24px;
+   top: 17px;
+   transform: rotate(-45deg);
+}
+
+
+.menu {
+   position: absolute;
+   top: -100vh;
+   height: calc(100vh - 90px);
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   transition: all 0.3s ease-in-out;
+   max-height: calc(100vh - 90px);
+   background: linear-gradient(
+      90deg,
+      rgba(26, 32, 44, 1) 0%,
+      rgba(19, 78, 74, 1) 35%,
+      rgba(17, 94, 89, 1) 100%
+   );
+   
+}
+
+.menu.active {   
+  top: 90px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.menuItem {   
+   display: flex;
+   height: 100px;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s ease-in-out;
+}
+
+

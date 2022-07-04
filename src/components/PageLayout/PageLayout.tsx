@@ -8,19 +8,32 @@ type PageLayoutProps = {
    description?: string
 }
 
-const PageLayout: React.FC<PageLayoutProps> = ({ children, title, description }) => {
+const PageLayout: React.FC<PageLayoutProps> = ({
+   children,
+   title,
+   description,
+}) => {
    return (
       <div className={styles.pageLayout}>
          <Head>
-            <title>{title ? `SupriMetais | ${title}` : 'SupriMetais - Seu parceiro de aço!'}</title>
-            <meta name="description" content={description ?? 'Produtos siderúrgicos'} />
+            <title>
+               {title
+                  ? `SupriMetais | ${title}`
+                  : 'SupriMetais - Seu parceiro de aço!'}
+            </title>
+            <meta
+               name="description"
+               content={description ?? 'Produtos siderúrgicos'}
+            />
             <link rel="icon" href="/favicon.ico" />
          </Head>
-         <header><Navbar /></header>
+         <header>
+            <Navbar />
+         </header>
          <main className={styles.container}>
             {children}
+            <footer>FOOTER</footer>
          </main>
-         <footer>FOOTER</footer>
       </div>
    )
 }
