@@ -1,0 +1,30 @@
+.slider {
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    bottom: 40%;
+}
+
+.container {
+    max-width: 390px;
+    max-height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image {
+    width: 350px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    color: #888;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+}
