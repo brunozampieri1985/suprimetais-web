@@ -1,0 +1,86 @@
+.container {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    min-height: 105px;
+    background-color: #000;
+}
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;  
+    align-items: flex-start;
+    animation: marquee linear infinite;    
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(100%, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.list:hover,
+.list:focus,
+.list:active {
+    animation-play-state: paused;
+}
+
+.item {        
+    min-width: 250px;
+    height: 105px;
+    padding: 15px;
+    display: block;   
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;    
+}
+
+.itemName {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.itemSymbol {
+    font-size: 12px;
+    color: #bbb;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.itemValue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 15px;
+}
+
+.itemPercentagePlus {
+    font-size: 14px;
+    font-weight: bold;
+    color: greenyellow;
+}
+
+.itemPercentageMinus {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(250, 71, 71);
+}
+
+.infoSource {
+    text-align: center;
+    font-size: 10px;
+    font-style: italic;
+    color: #ccc;
+    margin-top: 4PX;
+}
+

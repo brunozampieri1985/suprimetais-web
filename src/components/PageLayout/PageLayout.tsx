@@ -1,3 +1,4 @@
+import Footer from '@components/Footer'
 import Navbar from '@components/Navbar'
 import Head from 'next/head'
 import styles from './PageLayout.module.css'
@@ -32,7 +33,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({
          </header>
          <main className={styles.container}>
             {children}
-            <footer>FOOTER</footer>
+            <Footer />
          </main>
       </div>
    )

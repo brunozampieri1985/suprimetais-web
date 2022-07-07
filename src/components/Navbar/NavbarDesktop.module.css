@@ -1,5 +1,7 @@
 .navbar {  
-    position: absolute; 
+    position: fixed; 
+    top: 0;
+    left: 0;
     width: 100%;
     background: linear-gradient(
         90deg,
@@ -7,6 +9,7 @@
         rgba(19, 78, 74, 1) 35%,
         rgba(17, 94, 89, 1) 100%
      );
+     z-index: 999;
     
 }
 
