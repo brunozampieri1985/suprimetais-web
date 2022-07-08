@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import styles from './NavbarDesktop.module.css'
 import Link from 'next/link'
 import { AiFillHome, AiOutlineStock, AiFillSetting } from 'react-icons/ai'
@@ -10,18 +11,22 @@ const NavbarDesktop: React.FC = () => {
          <div className={styles.content}>
             <div className={styles.logo}>SupriMetais</div>
             <ul className={styles.menu}>
-               <li className={styles.menuItem}>
-                  <div className={styles.menuItemIcon}>
-                     <AiFillHome />
-                  </div>
-                  <div className={styles.menuItemText}>Home</div>
-               </li>
-               <li className={styles.menuItem}>
-                  <div className={styles.menuItemIcon}>
-                     <MdSupervisedUserCircle />
-                  </div>
-                  <div className={styles.menuItemText}>Sobre nós</div>
-               </li>
+               <a href="/">
+                  <li className={styles.menuItem}>
+                     <div className={styles.menuItemIcon}>
+                        <AiFillHome />
+                     </div>
+                     <div className={styles.menuItemText}>Home</div>
+                  </li>
+               </a>
+               <a href="/quem-somos">
+                  <li className={styles.menuItem}>
+                     <div className={styles.menuItemIcon}>
+                        <MdSupervisedUserCircle />
+                     </div>
+                     <div className={styles.menuItemText}>Quem somos</div>
+                  </li>
+               </a>
                <li className={styles.menuItem}>
                   <div className={styles.menuItemIcon}>
                      <AiOutlineStock />

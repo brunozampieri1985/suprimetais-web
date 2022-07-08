@@ -1,0 +1,47 @@
+.inputBox {
+    position: relative;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--theme-800);
+    background: var(--theme-color-bg);
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
+    color: #F5f5f5;
+}
+
+.inputBox input::-webkit-outer-spin-button,
+.inputBox input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 16px;
+    color: var(--theme-800);    
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    color: var(--theme-400);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 10px;
+    font-weight: bold;
+    padding: 0 10px;
+    background: var(--theme-color-bg);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.inputBox input:focus {
+    border: 1px solid var(--theme-400);
+}

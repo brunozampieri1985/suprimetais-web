@@ -36,8 +36,11 @@
 }
 
 .ghost:hover {
-    box-shadow: 0px 0px 10px #444444;
+    color: var(--theme-300);
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.1));
 }
+
+
 
 .md {
     font-size: 16px;    

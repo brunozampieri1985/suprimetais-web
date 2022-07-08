@@ -1,0 +1,34 @@
+.calculator {    
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+}
+.select {    
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid var(--theme-800);
+    background: var(--theme-color-bg);
+    color: var(--theme-600);
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
+
+}
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 15px;
+}
+.inputs {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+}

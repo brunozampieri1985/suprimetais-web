@@ -1,0 +1,48 @@
+.textWrapper {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+   padding: 20px;
+   margin: 0;
+   gap: 20px;
+   position: relative;
+}
+
+.text {
+   opacity: 0;
+   font-size: 16px;
+   animation: opacity 1s forwards;
+}
+
+.logo {
+    position: absolute;
+    font-family: 'Magneto';
+    bottom: 0;
+    right: 0;
+    font-size: 300px;
+    color: var(--theme-900);
+    animation: rotanteAndScale 1s forwards;
+    
+}
+
+@keyframes rotanteAndScale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(360deg) scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes opacity {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}

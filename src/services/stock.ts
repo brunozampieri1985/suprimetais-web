@@ -96,9 +96,7 @@ export const getCambio = async () => {
       .filter((item: string) => {
          return item !== undefined
       })
-
-   console.log(arr)
-
+   
    let indexOfUSD = arr.indexOf('Dólar Comercial')
    let indexofEuro = arr.indexOf('Euro')
 
