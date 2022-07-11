@@ -10,7 +10,7 @@ type InputProps = {
 const Input: React.FC<InputProps> = ({ type, placeholder, value, onChange }) => {
    return (
       <div className={styles.inputBox}>
-         <input type={type} value={value} onChange={onChange} required />
+         <input type={type === 'number' ? 'tel' : 'text'} value={value} onChange={onChange} required />
          <span>{placeholder}</span>
       </div>
    )

@@ -100,7 +100,7 @@ export const getCambio = async () => {
    let indexOfUSD = arr.indexOf('Dólar Comercial')
    let indexofEuro = arr.indexOf('Euro')
 
-   let reply = [
+   let reply: StockInfoType[] = [
       {
          symbol: 'USD',
          title: 'Dólar Comercial',
