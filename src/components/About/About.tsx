@@ -1,62 +1,44 @@
 import styles from './About.module.css'
-import PageContainer from '@components/PageContainer'
+import Section from '@components/Section'
+import { MdSupervisedUserCircle } from 'react-icons/md'
 import { useInView } from 'react-intersection-observer'
 
 const About: React.FC = () => {
    const { inView, ref } = useInView()
 
    return (
-      <PageContainer title="Quem somos">
+      <Section title="Quem Somos" icon={MdSupervisedUserCircle}>
          <div className={styles.textWrapper} ref={ref}>
             {inView && (
                <>
                   <p className={styles.text}>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Similique perferendis eum reiciendis laudantium pariatur,
-                     deleniti iusto nobis nemo soluta minus, unde atque optio
-                     sunt blanditiis earum dolorum exercitationem. Aliquam,
-                     ratione? Minima ex suscipit nam aspernatur eius harum
-                     laboriosam illum sunt impedit rem perferendis similique
-                     deleniti iusto hic, cumque incidunt nihil id tempore ipsam
-                     voluptatum repudiandae soluta. Distinctio cumque saepe
-                     itaque. Illum sit earum aliquam tempore corrupti expedita
-                     cupiditate aut voluptas voluptates reiciendis! Natus dicta
-                     dolor explicabo temporibus delectus ipsa voluptas,
-                     voluptates magnam earum vitae tempore illo beatae qui
-                     asperiores magni! Incidunt similique eligendi distinctio
-                     quae nemo asperiores quaerat assumenda voluptate ipsa,
-                     exercitationem inventore esse harum consectetur delectus
-                     sint repellat dicta perspiciatis aspernatur eaque illo
-                     maiores. Doloribus, reprehenderit! Dignissimos, aperiam
-                     qui!
+                     A SupriMetais nasceu da expertise acumulada em quase 50
+                     anos de atividades ligadas à aquisição, beneficiamento e
+                     comercialização de produtos siderúrgicos. Nesta longa
+                     jornada, tivemos o privilégio de encarar os mais complexos
+                     desafios, dos quais sempre resultaram em grande
+                     aprendizagem, possiblitando firmar grandes parcerias em
+                     todos os segmentos do mercado.
                   </p>
-                  <p className={styles.text} style={{animationDelay: '0.5s'}}>
-                     Tempore officiis iure commodi magni quis dicta aspernatur
-                     laboriosam nemo officia sapiente accusantium perferendis
-                     ratione optio ex atque ipsa nobis, sunt alias. Vitae,
-                     recusandae. Omnis adipisci nulla, sed repudiandae alias
-                     sequi debitis hic facilis corporis vel quod provident
-                     placeat nostrum sunt repellendus vitae odio laborum!
-                     Officiis harum illum veritatis, quaerat ut assumenda!
-                     Doloremque debitis, aut aliquam id fuga cupiditate sit
-                     dolor aspernatur impedit ipsam minus veniam quidem porro
-                     excepturi blanditiis est laborum architecto eos
-                     reprehenderit perferendis incidunt? Iste accusantium
-                     laborum quae beatae? Expedita autem facilis tempore
-                     voluptatibus ducimus natus ex culpa, dolorum repellat.
-                     Optio deleniti, dicta iste id eveniet, cupiditate et
-                     reprehenderit vitae doloribus officia doloremque placeat
-                     similique eligendi facere, voluptatem voluptate. Reiciendis
-                     tempora labore debitis ratione officia delectus ea porro
-                     veritatis ut sed. Tempore temporibus voluptatum dolorem ut
-                     tenetur eius, nam, ab voluptas amet in cupiditate itaque
-                     dolore architecto eligendi nisi?
+                  <p className={styles.text} style={{ animationDelay: '0.5s' }}>
+                     Somos focados na busca por soluções rápidas e
+                     eficazes, proporcionando economia de tempo, apresentando à
+                     seus clientes as melhores opções de fornecimento
+                     disponíveis no mercado. Graças à nossas parceriais em todo
+                     o segmento, apoiadas pela garantia da qualidade conforme
+                     ISO 9001:2015, podemos apresentar ótimas oportunidades de
+                     negócios com nossas representadas.
                   </p>
-                  <div className={styles.logo}>S</div>
+                  <p className={styles.text} style={{ animationDelay: '1s' }}>
+                     Estamos aptos à apresentar soluções saudáveis para as mais diversas situações.
+                  </p>
+                  <p className={styles.text} style={{ animationDelay: '1.5s' }}>
+                     Confie à nós suas dificuldades.
+                  </p>
                </>
             )}
          </div>
-      </PageContainer>
+      </Section>
    )
 }
 export default About

@@ -29,24 +29,25 @@ const Select = forwardRef((props: SelectProps, ref: any) => {
    }
 
    return (
-      <div className={styles.selectContainer}>
-         <div            
+      <div className={styles.selectContainer} aria-label='select'>
+         <div
+         className={styles.title}            
             ref={ref}
             onClick={() => setIsOpen(!isOpen)}>
             {selectedLabel ? selectedLabel : label} {!isOpen ? <GoTriangleDown /> : <GoTriangleUp />}
          </div>
          <div >
             {isOpen && (
-               <>
+               <div className={styles.select} aria-label='option'>
                   {options.map((option) => (
                      <div
-                     className={styles.select}
+                     className={styles.option}
                         key={option.value}
                         onClick={() => handleChange(option.value, option.label)}>
                         {option.label}
                      </div>
                   ))}
-               </>
+               </div>
             )}
          </div>
       </div>

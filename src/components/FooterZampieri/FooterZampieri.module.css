@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    display: flex;
+    font-family: 'Share Tech Mono';
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5f5;
+    background-color: black;
+    padding: 15px;    
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.container:hover {
+    font-size: 20px;
+    
+    color: var(--theme-400);
+}

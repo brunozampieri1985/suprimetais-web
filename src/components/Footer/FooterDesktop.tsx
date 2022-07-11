@@ -1,19 +1,18 @@
-import styles from './Footer.module.css'
-import { useMemo } from 'react'
+import styles from './FooterDesktop.module.css'
 import { useInView } from 'react-intersection-observer'
 import Button from '@components/Button'
 import { AiOutlineStock, AiFillSetting } from 'react-icons/ai'
 import { FaClipboardList } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 
-const Footer: React.FC = () => {
-   const products = useMemo(() => {
-      return ['Chapas', 'Bobinas', 'Barras', 'Peças Especiais']
-   }, [])
 
-   const services = useMemo(() => {
-      return ['Corte', 'Usinagem', 'Tratamento Térmico']
-   }, [])
+type FooterProps = {
+   products: string[]
+   services: string[]
+}
+
+const FooterDesktop: React.FC<FooterProps> = ({ products, services }) => {
+   
 
    const { ref, inView } = useInView()
 
@@ -85,4 +84,4 @@ const Footer: React.FC = () => {
       </>
    )
 }
-export default Footer
+export default FooterDesktop

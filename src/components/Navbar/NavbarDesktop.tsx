@@ -27,30 +27,38 @@ const NavbarDesktop: React.FC = () => {
                      <div className={styles.menuItemText}>Quem somos</div>
                   </li>
                </a>
-               <li className={styles.menuItem}>
-                  <div className={styles.menuItemIcon}>
-                     <AiOutlineStock />
-                  </div>
-                  <div className={styles.menuItemText}>Produtos</div>
-               </li>
-               <li className={styles.menuItem}>
-                  <div className={styles.menuItemIcon}>
-                     <AiFillSetting />
-                  </div>
-                  <div className={styles.menuItemText}>Serviços</div>
-               </li>
-               <li className={styles.menuItem}>
-                  <div className={styles.menuItemIcon}>
-                     <FaClipboardList />
-                  </div>
-                  <div className={styles.menuItemText}>Cotações</div>
-               </li>
+               <a href="/produtos">
+                  <li className={styles.menuItem}>
+                     <div className={styles.menuItemIcon}>
+                        <AiOutlineStock />
+                     </div>
+                     <div className={styles.menuItemText}>Produtos</div>
+                  </li>
+               </a>
+               <a href="/servicos">
+                  <li className={styles.menuItem}>
+                     <div className={styles.menuItemIcon}>
+                        <AiFillSetting />
+                     </div>
+                     <div className={styles.menuItemText}>Serviços</div>
+                  </li>
+               </a>
+               <a href="/cotacao">
+                  <li className={styles.menuItem}>
+                     <div className={styles.menuItemIcon}>
+                        <FaClipboardList />
+                     </div>
+                     <div className={styles.menuItemText}>Cotações</div>
+                  </li>
+               </a>
+               <a href="/contato">
                <li className={styles.menuItem}>
                   <div className={styles.menuItemIcon}>
                      <MdEmail />
                   </div>
                   <div className={styles.menuItemText}>Contato</div>
                </li>
+               </a>
             </ul>
          </div>
       </nav>

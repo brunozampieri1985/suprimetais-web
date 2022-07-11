@@ -30,13 +30,13 @@ const NavbarMobile: React.FC = () => {
                   &nbsp;Home
                </li>
             </Link>
-            <Link href={'/'} passHref>
+            <Link href={'/quem-somos'} passHref>
                <li
                   className={`${styles.menuItem} ${
                      isOpen ? styles.active : ''
                   }`}>
                   <MdSupervisedUserCircle />
-                  &nbsp;Sobre nós
+                  &nbsp;Quem Somos
                </li>
             </Link>
             <Link href={'/'} passHref>

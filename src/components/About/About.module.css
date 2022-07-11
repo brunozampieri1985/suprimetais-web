@@ -7,24 +7,17 @@
    margin: 0;
    gap: 20px;
    position: relative;
+   overflow: hidden;
 }
 
 .text {
    opacity: 0;
-   font-size: 16px;
+   font-size: 20px;
    animation: opacity 1s forwards;
+   z-index: 1;
 }
 
-.logo {
-    position: absolute;
-    font-family: 'Magneto';
-    bottom: 0;
-    right: 0;
-    font-size: 300px;
-    color: var(--theme-900);
-    animation: rotanteAndScale 1s forwards;
-    
-}
+
 
 @keyframes rotanteAndScale {
     0% {
@@ -46,3 +39,10 @@
       opacity: 1;
    }
 }
+
+@media (max-width: 768px) {  
+   .text {
+      font-size: 16px;
+   }
+}
+   

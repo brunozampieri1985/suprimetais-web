@@ -1,15 +1,28 @@
 .selectContainer {
+    position: relative;
     background-color: var(--theme-input-bg);
-    max-width: fit-content;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     border-bottom: vaR(--theme-400) 1px solid;
     color: var(--theme-400);
     min-width: 180px;
+    
 }
 
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .select {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 9;
+    
+}
+.option {
     width: 100%;
     padding: 10px;
     background: var(--theme-input-bg);
@@ -19,6 +32,6 @@
     cursor: pointer;
 }
 
-.select:hover {
+.option:hover {
     background-color: var(--theme-color-bg);
 }

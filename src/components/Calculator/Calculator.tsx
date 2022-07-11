@@ -11,11 +11,52 @@ const Calculator: React.FC = () => {
    const [comprimento, setComprimento] = useState('')
    const [largura, setLargura] = useState('')
    const [interno, setInterno] = useState('')
+   const [result, setResult] = useState(0)
 
    const selectRef = useRef<HTMLSelectElement>(null)
 
-   const handleCalculate = () => {}
+   const makeFloat = (value: string) => {
+      let newValue = value.replace(',', '.')
+      try {
+         return parseFloat(newValue)
+      } catch (error) {
+         return 0
+      }
+   }
+    
 
+    const handleCalculate = () => {
+      let bitolaNumber = makeFloat(bitola)
+      let comprimentoNumber = makeFloat(comprimento)
+      let larguraNumber = makeFloat(largura)
+      let internoNumber = makeFloat(interno)
+      switch (perfil) {
+         case 'redondo':
+            setResult(calculator.redondo(bitolaNumber, comprimentoNumber))
+            break
+         case 'quadrado':
+            setResult(
+               calculator.quadrado(
+                  bitolaNumber,
+                  comprimentoNumber,
+                  larguraNumber
+               )
+            )
+            break
+         case 'tubo':
+            setResult(
+               calculator.tubo(
+                  bitolaNumber,
+                  comprimentoNumber,
+                  larguraNumber,
+                  internoNumber
+               )
+            )
+            break
+         default:
+            setResult(0)
+      }
+   }
    return (
       <section className={styles.calculator}>
          <div className={styles.container}>
@@ -47,19 +88,24 @@ const Calculator: React.FC = () => {
                   placeholder="Comprimento"
                   onChange={(e) => setComprimento(e.target.value)}
                />
-               <Input
-                  type={'number'}
-                  placeholder="Largura"
-                  onChange={(e) => setLargura(e.target.value)}
-               />
-               <Input
-                  type={'number'}
-                  placeholder="Diâmentro Interno"
-                  onChange={(e) => setInterno(e.target.value)}
-               />
+               {perfil === 'quadrado' && (
+                  <Input
+                     type={'number'}
+                     placeholder="Largura"
+                     onChange={(e) => setLargura(e.target.value)}
+                  />
+               )}
+               {perfil === 'tubo' && (
+                  <Input
+                     type={'number'}
+                     placeholder="Diâmentro Interno"
+                     onChange={(e) => setInterno(e.target.value)}
+                  />
+               )}
                <div className={styles.actions}>
                   <Button onClick={handleCalculate}>Calcular</Button>
                </div>
+               <div className={styles.results}>{result > 0 ? `Resultado: ${result.toFixed(2)} kg` : ''}</div>
             </div>
          </div>
       </section>

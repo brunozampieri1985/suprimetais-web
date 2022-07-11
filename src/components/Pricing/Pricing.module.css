@@ -1,0 +1,56 @@
+.pricing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .company {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin: 0;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .pricingActions {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+    gap: 20px;
+
+ }
+
+ .addItem {
+    display: flex;
+    padding: 15px 0;
+    flex-direction: column;
+    width: 450px;
+    height: 100%;
+    gap: 20px;
+ }
+
+ .addItemErrors {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(168, 0, 0);
+    font-size: 14px;
+    color: white;
+    border-radius: 6px;
+ }
+
+ .addItemErrorsClose {
+    font-size: 18px;
+    cursor: pointer;
+ }

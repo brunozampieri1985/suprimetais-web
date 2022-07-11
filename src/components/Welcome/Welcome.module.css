@@ -34,7 +34,8 @@
 .part1Title {
    color: var(--theme-400);
    text-align: center;
-   text-transform: uppercase;
+   font-family: 'Merriweather';
+   font-weight: 700;
    font-size: 36px;
    position: relative;
    z-index: 1;

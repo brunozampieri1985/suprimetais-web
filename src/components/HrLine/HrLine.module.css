@@ -1,0 +1,5 @@
+.hr {    
+    margin: 4px auto;
+    display: flex;
+    background-color: var(--theme-800);
+}

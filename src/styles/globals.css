@@ -11,8 +11,64 @@
   --theme-900:#134e4a;
 
   --theme-color-bg: #1A202C;
-  --theme-color-bg-overlay:  #1a202c75;
+  --theme-color-bg-overlay:  #1a202c9f;
   --theme-input-bg: #262f3f;
+}
+
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Share Tech Mono'), url('https://fonts.cdnfonts.com/s/15739/ShareTechMono-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather'), url('https://fonts.cdnfonts.com/s/12231/Merriweather-Italic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 250;
+  src: local('Merriweather'), url('https://fonts.cdnfonts.com/s/12231/Merriweather-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 250;
+  src: local('Merriweather'), url('https://fonts.cdnfonts.com/s/12231/Merriweather-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Merriweather'), url('https://fonts.cdnfonts.com/s/12231/Merriweather-LightItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Merriweather'), url('https://fonts.cdnfonts.com/s/12231/Merriweather-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Merriweather'), url('https://fonts.cdnfonts.com/s/12231/Merriweather-BoldItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: bolder;
+  font-weight: 900;
+  src: local('Merriweather'), url('https://fonts.cdnfonts.com/s/12231/Merriweather-Black.woff') format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Merriweather'), url('https://fonts.cdnfonts.com/s/12231/Merriweather-HeavyItalic.woff') format('woff');
 }
 
 @font-face {
