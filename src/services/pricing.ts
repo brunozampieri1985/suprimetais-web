@@ -8,6 +8,7 @@ export interface ICompany {
 }
 
 export interface IProduct {
+    id?: number
     description: string
     quantity: number | string
     unit: string

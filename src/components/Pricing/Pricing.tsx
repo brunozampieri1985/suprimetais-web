@@ -5,6 +5,7 @@ import Section from '@components/Section'
 import Modal, { ModalHandle } from '@components/Modal'
 import Button from '@components/Button'
 import { FaClipboardList } from 'react-icons/fa'
+import { BsFillTrashFill } from 'react-icons/bs'
 import Input from '@components/Input'
 import Select from '@components/Select'
 import HrLine from '@components/HrLine'
@@ -47,6 +48,7 @@ const Pricing: React.FC = () => {
             return
          }
          let newItem: IProduct = {
+            id: items.length + 1,
             description,
             quantity,
             unit,
@@ -96,6 +98,26 @@ const Pricing: React.FC = () => {
                      </span>
                   </div>
                ))}
+         </div>
+      )
+   }
+
+   const PricingItem: React.FC<{ pItem: IProduct }> = ({ pItem }) => {
+      return (
+         <div className={styles.pricingItem}>
+            <div className={styles.pricingItemDescription}>
+               {pItem.description}
+            </div>
+            <div className={styles.pricingItemQuantity}>
+               {pItem.quantity} {pItem.unit}
+            </div>
+            <div className={styles.removeItem}>
+               <BsFillTrashFill
+                  onClick={() =>
+                     setItems(items.filter((i) => i.id !== pItem.id))
+                  }
+               />
+            </div>
          </div>
       )
    }
@@ -180,23 +202,39 @@ const Pricing: React.FC = () => {
                   }
                />
             </div>
+            <div className={styles.pricingActions}>
+               <Button variant={'secondary'} size={'sm'}>
+                  Salvar Dados
+               </Button>
+               <Button
+                  variant={'ghost'}
+                  size={'sm'}
+                  onClick={() => setItems([])}>
+                  Limpar
+               </Button>
+            </div>
             <div className={styles.items}>
-               <div className={styles.itemsHeader}>Itens</div>
+               <div className={styles.itemsHeader}>
+                  Itens: {items.length > 0 ? `${items.length}` : null}
+               </div>
+               <HrLine width="100%" />
                {items.map((item, index) => (
-                  <div className={styles.item} key={index}>
-                     <div className={styles.itemDescription}>
-                        {item.description}
-                     </div>
-                     <div className={styles.itemQuantity}>
-                        {item.quantity} {item.unit}
-                     </div>
-                  </div>
+                  <>
+                  <PricingItem key={index} pItem={item} />
+                  <HrLine width="100%" />
+                  </>
                ))}
             </div>
-            <HrLine width='100%' />
             <div className={styles.pricingActions}>
-               <Button onClick={showModal}>Adicionar item</Button>
-               <Button variant={'ghost'}>Limpar</Button>
+               <Button variant={'secondary'} size={'sm'} onClick={() => modalRef.current?.open()}>
+                  Adicionar item
+               </Button>
+               <Button
+                  variant={'ghost'}
+                  size={'sm'}
+                  onClick={() => setItems([])}>
+                  Limpar
+               </Button>
             </div>
          </div>
       </Section>
