@@ -13,7 +13,7 @@ const Welcome: React.FC = () => {
             <div className={styles.part1Wrapper}>
                <h1 className={styles.part1Title}>Seu parceiro de AÇO!</h1>
                <p className={styles.part1Subtitle}>
-                  Desde 1982 sempre fodendo com os clientes!
+                  Desde 1982!
                </p>
                <div className={styles.part1Actions}>
                   <Button size={device > 768 ? "lg" : "sm"}>Faça sua cotação!</Button>
