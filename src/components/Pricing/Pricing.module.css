@@ -23,7 +23,6 @@
 
  .pricingActions {
     display: flex;
-    justify-content: center;
     padding: 20px;
     margin: 0;
     gap: 20px;
@@ -53,4 +52,45 @@
  .addItemErrorsClose {
     font-size: 18px;
     cursor: pointer;
+ }
+
+ .itemsHeader {
+   font-size: 24px;
+   padding: 15px;
+ }
+
+ .pricingItem {
+   display: flex;
+   width: 100%;
+   padding: 10px;
+ }
+
+ .pricingItemDescription {
+   display: flex;
+   width: 70%;
+   padding: 10px;
+   border-right: var(--theme-900) 1px solid;
+   align-items: center;
+ }
+
+ .pricingItemQuantity {
+   display: flex;
+   width: 20%;
+   padding: 10px;
+   border-right: var(--theme-900) 1px solid;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .removeItem {
+   display: flex;
+   width: 10%;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+ }
+
+ .removeItem:hover {
+   color: var(--theme-400);
  }
